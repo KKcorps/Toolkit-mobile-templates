@@ -228,7 +228,6 @@ public class MainActivity extends ActionBarActivity implements
                     return false;
                 // right to left swipe
                 if(e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                    Toast.makeText(MainActivity.this, "Left Swipe", Toast.LENGTH_SHORT).show();
                     if(currentView==answerView) {
                         currentView.clearAnimation();
                         currentView.setAnimation(animation1);
@@ -236,7 +235,6 @@ public class MainActivity extends ActionBarActivity implements
                     }
 
                 }  else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                    Toast.makeText(MainActivity.this, "Right Swipe", Toast.LENGTH_SHORT).show();
                     if(currentView==questionView) {
                         currentView.clearAnimation();
                         currentView.setAnimation(animation1);
